@@ -1,4 +1,10 @@
 <script>
+	//TODO: Put names on pie pieces?
+	// Add a color palette generator
+	// Spin! The! Wheel!
+	// Fonts
+	// Allow for deletion of restaurants
+
 	import Slice from './Slice.svelte';
 	export let restaurants;
 
@@ -44,7 +50,10 @@
 </main>
 
 <style>
+	main {
+		text-align: center;
+	}
 	svg {
-		height: 200px;
+		height: 60vh;
 	}
 </style>
