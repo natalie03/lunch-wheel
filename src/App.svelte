@@ -5,8 +5,10 @@
 	// Fonts
 	// Allow for deletion of restaurants
 
-	import Slice from './Slice.svelte';
 	export let restaurants;
+
+	import GuideItem from './GuideItem.svelte';
+	import { colors } from './data/colors.json'
 
 	let cumulativePercent = 0;
 	const percent = 1 / restaurants.length;
@@ -41,19 +43,33 @@
 		style="transform: rotate(-90deg)"
 	>
 	{#each restaurants as r, i}
-		<path d={getPath()} fill={i % 2 ? 'red' : 'blue'} />
+		<path d={getPath()} fill={colors[i]} />
 	{/each}
 	</svg>
-	{#each restaurants as r}
-		<Slice name={r.name} />
+	<ul>
+	{#each restaurants as r, i}
+		<GuideItem color={colors[i]} name={r.name} />
 	{/each}
+	</ul>
+	<div>
+		<button type="button">Spin. The. Wheel.</button>
+	</div>
 </main>
 
 <style>
 	main {
 		text-align: center;
+		position: relative;
+		width: 100%;
+		height: 100vh;
 	}
 	svg {
 		height: 60vh;
+	}
+	ul {
+		position: absolute;
+		left: 0;
+		background-color: #F2F2F2;
+		top: 2vh;
 	}
 </style>
