@@ -1,0 +1,21 @@
+{
+  "restaurants": [
+    {
+      "name": "Eem"
+    },
+    {
+      "name": "The Whole Bowl"
+    },
+    {
+      "name": "Brass Tacks"
+    },
+    {
+      "name": "Life of Pie"
+    }, 
+    {
+      "name": "A fifth place"
+    }, {
+      "name": "A sixth place"
+    }
+  ]
+}

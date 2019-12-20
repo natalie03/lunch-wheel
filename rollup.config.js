@@ -1,4 +1,5 @@
 import svelte from 'rollup-plugin-svelte';
+import json from 'rollup-plugin-json';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
@@ -23,6 +24,9 @@ export default {
 			css: css => {
 				css.write('public/build/bundle.css');
 			}
+		}),
+		json({
+				compact: true
 		}),
 
 		// If you have external dependencies installed from
